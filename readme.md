@@ -10,8 +10,8 @@ Do npm rebuild and access it via JS.
 Steps to run this project-
 ```npm install - install all dependencies
 
+npm install
 npm run build
-
 node index.js
 
 
