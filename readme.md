@@ -33,9 +33,7 @@ npm init
 npm install node-gyp --save-dev
 npm install node-addon-api
 
-Read more at: 
-https://www.npmjs.com/package/node-gyp?activeTab=readme
-https://github.com/nodejs/node-addon-api
+
 
 
 3. Setup package.json
@@ -253,4 +251,14 @@ module.exports = testAddon
 We added a simple add function.
 We added the wrapper for the add function : AddWrapped which is used to interface the add function with N-API.
 We added the key add to export the AddWrapped function to the JS.*/
+
 ```
+
+Read more at: 
+
+https://www.npmjs.com/package/node-gyp?activeTab=readme
+
+https://github.com/nodejs/node-addon-api
+
+https://blog.atulr.com/node-addon-guide/
+
