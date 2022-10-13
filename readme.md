@@ -23,6 +23,7 @@ Refer this step by step guide to Do it yourself:
 
 1. Create a basic node project test-addon
 
+```
 mkdir test-addon
 cd test-addon
 git init
@@ -35,6 +36,7 @@ npm install node-addon-api
 Read more at: 
 https://www.npmjs.com/package/node-gyp?activeTab=readme
 https://github.com/nodejs/node-addon-api
+
 
 3. Setup package.json
 
@@ -251,4 +253,4 @@ module.exports = testAddon
 We added a simple add function.
 We added the wrapper for the add function : AddWrapped which is used to interface the add function with N-API.
 We added the key add to export the AddWrapped function to the JS.*/
-
+```
