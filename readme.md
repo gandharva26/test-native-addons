@@ -17,27 +17,29 @@ node index.js
 
 ```
 
-```
+
 Refer this step by step guide to Do it yourself:
 
 
 1. Create a basic node project test-addon
 
-
+```
 mkdir test-addon
 cd test-addon
 git init
 npm init
+```
 
 2. Set up Dependencies
+```
 npm install node-gyp --save-dev
 npm install node-addon-api
-
+```
 
 
 
 3. Setup package.json
-
+```
 {
   "name": "test-addon",
   "version": "1.0.0",
@@ -58,8 +60,9 @@ npm install node-addon-api
   }
 }
 
-
+```
 4. Setup binding.gyp
+```
 {
     "targets": [{
         "target_name": "testaddon",
@@ -79,13 +82,14 @@ npm install node-addon-api
         'defines': [ 'NAPI_DISABLE_CPP_EXCEPTIONS' ]
     }]
 }
-
+```
 
 5. Create the following files:
 
 1. main.cpp
 /* cppsrc/main.cpp */
 
+```
 #include <napi.h> // node - api module includes the napi header file so that we can access all the helper macros (#define ls = x.y.z), classes and functions.
 #include "Samples/functionexample.h"
 Napi::Object InitAll(Napi::Env env, Napi::Object exports) {
@@ -106,12 +110,14 @@ NODE_API_MODULE(testaddon, InitAll)
 * node-gyp (which is the usual way of building modules). The second argument
 * points to the function to invoke. The function must not be namespaced.
 */
-
+```
 
 
 2. Seup functional CPP files and header inside TEST-ADDON/cppsrc/Samples
+
 a)functionalexample.cc
 
+```
 #include "functionexample.h"
 int count;
 std::string functionexample::hello(){
@@ -180,8 +186,10 @@ input params/return value from the Napi namespace.
 Every wrapped function takes in CallbackInfo as the input parameter. 
 This contains things like the context and the input parameters that needs to be passed to the function.
 Init function is used to just set the export key as hello with corresponding wrapped function HelloWrapped . */
+```
 
 b)functionalexample.h
+```
 #include <napi.h>
 namespace functionexample {
   std::string hello();
@@ -196,10 +204,11 @@ Napi::Number LoopWrapped(const Napi::CallbackInfo& info);
 Napi::Object Init(Napi::Env env, Napi::Object exports);
 
 }
-
+```
 
 
 6. Setup index.js
+```
 const testAddon = require('./build/Release/testaddon.node')
 console.log('addon', testAddon)
 
@@ -251,6 +260,7 @@ module.exports = testAddon
 We added a simple add function.
 We added the wrapper for the add function : AddWrapped which is used to interface the add function with N-API.
 We added the key add to export the AddWrapped function to the JS.*/
+
 
 ```
 
