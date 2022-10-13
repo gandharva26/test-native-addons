@@ -9,7 +9,9 @@ Do npm rebuild and access it via JS.
 
 Steps to run this project-
 npm install - install all dependencies
+
 npm run build
+
 node index.js
 
 
