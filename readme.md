@@ -1,9 +1,6 @@
 # Setup
 
 ## Prerequisites
-Node v14
-C++ (gcc)
-Python v3.10
 
 Before starting to use **Node-API** you need to assure you have the following
 prerequisites:
