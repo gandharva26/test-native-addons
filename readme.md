@@ -24,6 +24,7 @@ brew install gcc
 Steps to run this project-
 ```npm install - install all dependencies
 
+
 npm install 
 npm run build
 node index.js
