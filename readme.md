@@ -1,4 +1,16 @@
-Requirements - Node, C++, Python
+# Setup
+
+## Prerequisites
+Node v14
+C++ (gcc)
+Python v3.10
+
+Before starting to use **Node-API** you need to assure you have the following
+prerequisites:
+
+* **Node.JS** see: [Installing Node.js](https://nodejs.org/)
+* **Python** see: [InstallingPython](https://www.python.org/downloads/release/python-3100/)
+* **C++** see: [Installing C++](https://gcc.gnu.org/install/)
 
 For MacOS
 ```
@@ -97,7 +109,7 @@ npm install node-addon-api
 
 5. Create the following files:
 
-1. main.cpp
+main.cpp
 /* cppsrc/main.cpp */
 
 ```
@@ -124,7 +136,7 @@ NODE_API_MODULE(testaddon, InitAll)
 ```
 
 
-2. Seup functional CPP files and header inside TEST-ADDON/cppsrc/Samples
+Setup functional CPP file and header inside TEST-ADDON/cppsrc/Samples
 
 a)functionalexample.cc
 
@@ -179,7 +191,7 @@ Napi::Number functionexample::LoopWrapped(const Napi::CallbackInfo& info) {
 
 
 
-// set the function here
+// Insert function call export  here
 Napi::Object functionexample::Init(Napi::Env env, Napi::Object exports)
 {
   exports.Set(
@@ -198,6 +210,8 @@ Every wrapped function takes in CallbackInfo as the input parameter.
 This contains things like the context and the input parameters that needs to be passed to the function.
 Init function is used to just set the export key as hello with corresponding wrapped function HelloWrapped . */
 ```
+
+Setup header file inside TEST-ADDON/cppsrc/Samples
 
 b)functionalexample.h
 ```
