@@ -1,3 +1,5 @@
+## This project was developed to create a boiler plate for converting C++ library code to Javascript executable file (Node.Js)
+
 # Setup
 
 ## Prerequisites
