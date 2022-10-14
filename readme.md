@@ -104,7 +104,7 @@ npm install node-addon-api
 }
 ```
 
-5. Create the following files:
+5. Create a folder cppsrc for storing C++ files and then create following files inside it:
 
 main.cpp
 /* cppsrc/main.cpp */
@@ -132,9 +132,9 @@ NODE_API_MODULE(testaddon, InitAll)
 */
 ```
 
+Create a folder 'Samples' inside cppsrc and setup the functional CPP file (C++ functions) and header(C++ headers) inside cppsrc/Samples
 
-Setup functional CPP file and header inside TEST-ADDON/cppsrc/Samples
-
+/* cppsrc/functionalexample.cpp */
 a)functionalexample.cc
 
 ```
@@ -208,8 +208,8 @@ This contains things like the context and the input parameters that needs to be 
 Init function is used to just set the export key as hello with corresponding wrapped function HelloWrapped . */
 ```
 
-Setup header file inside TEST-ADDON/cppsrc/Samples
-
+Setup header file inside /cppsrc/Samples
+/* cppsrc/functionalexample.h */
 b)functionalexample.h
 ```
 #include <napi.h>
