@@ -41,6 +41,13 @@ node index.js
 Refer this step by step guide to Do it yourself:
 
 
+- Folder structure
+
+
+<img width="258" alt="Screen Shot 2022-10-13 at 7 30 59 PM" src="https://user-images.githubusercontent.com/55717003/195748640-10d131eb-d802-4335-b6c0-4cab2cfbe9a5.png">
+
+
+
 1. Create a basic node project test-addon
 
 ```
