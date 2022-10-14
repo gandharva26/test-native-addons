@@ -1,3 +1,14 @@
+Requirements - Node, C++, Python
+
+For MacOS
+```
+brew install node@14
+brew install python
+brew install gcc
+```
+
+
+
 make sure you run npm run build again after changing c++ files.
 
 Also when you add a new header file/cpp file :
